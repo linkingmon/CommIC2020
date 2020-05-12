@@ -12,7 +12,7 @@ algorithm_cnt = numel(sim_algorithm);
 for iM = 1 : numel(M)
     ber = [];
     for i_algorithm=1:algorithm_cnt
-        filename = [int2str(Nt), 'x', int2str(K),'_', int2str(M(iM)), '-QAM_', char(sim_algorithm(i_algorithm))];
+        filename = [int2str(Nt), 'x', int2str(K),'_', int2str(M(iM)), '-QAM_', char(sim_algorithm(i_algorithm))]
         ber1 = load(['data/', filename, '.mat']);
         BER = [ber1.cur_ber.' ; zeros(length(EbN0)-length(ber1.cur_ber),1)];
         ber = [ber BER];
@@ -20,7 +20,7 @@ for iM = 1 : numel(M)
 
     for i_algorithm=1:algorithm_cnt
         legend_name = strcat(sim_algorithm_name(i_algorithm), " ", int2str(M(iM)), "-QAM");
-        leg{(i_algorithm-1)*numel(M)+iM} = sprintf(legend_name);
+        leg{(iM-1)*numel(sim_algorithm)+i_algorithm} = sprintf(legend_name);
         plot(EbN0,ber(:,i_algorithm), line_type(iM), 'LineWidth', 2, 'Color', color(i_algorithm));
         hold on;
     end
