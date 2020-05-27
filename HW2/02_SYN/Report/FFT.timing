@@ -1,0 +1,81 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FFT
+Version: N-2017.09-SP2
+Date   : Wed May 27 01:12:40 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: clk_r_REG2026_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG1042_S3
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clk_r_REG2026_S19/CK (DFFRX1)                           0.00 #     0.00 r
+  clk_r_REG2026_S19/Q (DFFRX1)                            0.52       0.52 f
+  U1220/Y (AND2X2)                                        0.18       0.69 f
+  U1351/S (ADDFXL)                                        0.64       1.34 r
+  U2625/Y (NOR2X1)                                        0.09       1.42 f
+  U733/Y (OAI21X1)                                        0.18       1.60 r
+  U469/Y (AOI21X1)                                        0.13       1.73 f
+  U1006/Y (OAI21X1)                                       0.16       1.89 r
+  U1001/Y (AOI21XL)                                       0.15       2.03 f
+  U2660/Y (OAI21X1)                                       0.19       2.22 r
+  U584/Y (AOI21X1)                                        0.12       2.34 f
+  U995/Y (OAI21XL)                                        0.26       2.60 r
+  U2419/Y (AOI21XL)                                       0.16       2.76 f
+  U991/Y (OAI21XL)                                        0.28       3.04 r
+  U986/Y (AOI21XL)                                        0.16       3.20 f
+  U985/Y (OAI21XL)                                        0.28       3.48 r
+  U2712/Y (XNOR2X1)                                       0.25       3.73 f
+  U1457/Y (MX2X1)                                         0.22       3.95 f
+  U1275/Y (INVXL)                                         0.11       4.05 r
+  U1476/Y (NAND2XL)                                       0.08       4.14 f
+  U518/Y (NAND2XL)                                        0.12       4.25 r
+  U398/Y (XNOR2X1)                                        0.29       4.54 r
+  DP_OP_201_132_1221/U624/CO (CMPR42X1)                   0.84       5.39 f
+  U1311/S (ADDFXL)                                        0.73       6.11 f
+  DP_OP_201_132_1221/U290/S (CMPR42X1)                    0.62       6.73 f
+  U3398/CO (ADDFX1)                                       0.36       7.09 f
+  U3422/CO (ADDFX1)                                       0.28       7.37 f
+  U3446/CO (ADDFX1)                                       0.28       7.64 f
+  U3462/CO (ADDFX1)                                       0.28       7.92 f
+  U3466/CO (ADDFX1)                                       0.28       8.20 f
+  U4041/CO (ADDFX1)                                       0.28       8.48 f
+  U4046/CO (ADDFX1)                                       0.28       8.76 f
+  U4287/CO (ADDFX1)                                       0.28       9.04 f
+  U4320/CO (ADDFX1)                                       0.27       9.31 f
+  U2815/Y (XOR2X1)                                        0.15       9.46 f
+  U762/Y (AOI222XL)                                       0.31       9.77 r
+  U2709/Y (INVXL)                                         0.09       9.86 f
+  clk_r_REG1042_S3/D (DFFRX4)                             0.00       9.86 f
+  data arrival time                                                  9.86
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.10       9.90
+  clk_r_REG1042_S3/CK (DFFRX4)                            0.00       9.90 r
+  library setup time                                     -0.04       9.86
+  data required time                                                 9.86
+  --------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -9.86
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

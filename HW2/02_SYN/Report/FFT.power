@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : FFT
+Version: N-2017.09-SP2
+Date   : Wed May 27 01:12:40 2020
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   5.1056 mW   (95%)
+  Net Switching Power  = 241.2036 uW    (5%)
+                         ---------
+Total Dynamic Power    =   5.3468 mW  (100%)
+
+Cell Leakage Power     = 136.3045 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           4.6216        3.0661e-02        6.3107e+07            4.7154  (  86.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.4840            0.2105        7.3197e+07            0.7677  (  14.00%)
+--------------------------------------------------------------------------------------------------
+Total              5.1056 mW         0.2412 mW     1.3630e+08 pW         5.4831 mW
+1
